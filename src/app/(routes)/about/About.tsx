@@ -1,3 +1,7 @@
-export default function About () {
-    return <div>This is the About component</div>;
+import BackgroundImage from "@/components/BackgroundImage";
+
+export default function About() {
+    return <BackgroundImage image="/images/about.jpg">
+    <div>This is the About component</div>
+    </BackgroundImage>
 }

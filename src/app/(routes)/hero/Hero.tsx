@@ -1,8 +1,8 @@
 import Navigation from "@/components/Header";
+import BackgroundImage from "@/components/BackgroundImage";
 
 export default function Hero () {
-    return <>
+    return <BackgroundImage image="/images/hero.jpg">
         <Navigation/>
-        <div>This is the Hero component</div>
-    </>;
+    </BackgroundImage>;
 }
