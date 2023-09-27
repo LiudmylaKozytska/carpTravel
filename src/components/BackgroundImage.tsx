@@ -12,7 +12,7 @@ export default function BackgroundImage(props: BgImage) {
         backgroundImage: `linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)), url(${props.image})`,
         backgroundSize: "cover",
         backgroundPositionY: "top",
-        backgroundPositionX: "10%",
+        backgroundPositionX: "center",
 
         backgroundRepeat: "no-repeat",
       }}

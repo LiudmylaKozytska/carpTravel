@@ -1,12 +1,12 @@
-import Navigation from "@/components/Header";
 import BackgroundImage from "@/components/BackgroundImage";
 import data from "../../../../public/content/hero.json";
+import Header from "@/components/Header";
 
 export default function Hero() {
   return (
     <BackgroundImage image="/images/hero.jpg">
       <div className="container pt-[36px] pb-[56px] px-[20px] md:py-[64px] lg:py-[104px] relative">
-        <Navigation/>
+        <Header />
         <div className="mb-[24px] mt-[36px] flex flex-col items-end ">
           <div>
             <p className="font-medium text-[37px] uppercase leading-none">

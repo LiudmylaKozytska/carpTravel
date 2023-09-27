@@ -1,26 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import content from "../../public/content/navigation.json";
 import logo from "../../public/images/logo.png";
 import { Karantina } from "next/font/google";
+import Navigation from "./navigation";
 
 const karantina = Karantina({
-  subsets: ['latin'],
-  weight: ['400'],
-  style: ['normal'],
-})
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal"],
+});
 
-export default function Navigation() {
+export default function Header() {
   return (
-    <div>
+    <div className="flex justify-between">
       <div>
-              <Image src={logo} alt="logo" />
-              <p className="font-karantina text-[14px]">CarpTravel</p>
+        <Image src={logo} alt="logo" />
+        <p className="font-karantina text-[14px]">CarpTravel</p>
       </div>
-      <ul className="sm:hidden flex absolute">
-        {content.map((item) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul>
+      <Navigation />
     </div>
   );
 }
