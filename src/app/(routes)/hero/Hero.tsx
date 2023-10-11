@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 export default function Hero() {
   return (
     <BackgroundImage image="/images/hero.jpg">
-      <div className="container pt-[36px] pb-[56px] px-[20px] md:py-[64px] lg:py-[104px] relative">
+      <div id="hero" className="container pt-[36px] pb-[56px] px-[20px] md:py-[64px] lg:py-[104px] relative">
         <Header />
         <div className="mb-[24px] mt-[36px] flex flex-col items-end ">
           <div>

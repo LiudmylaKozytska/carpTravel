@@ -4,7 +4,7 @@ import data from "../../../../public/content/career.json";
 export default function Career() {
   return (
     <BackgroundImage image="/images/career.jpg">
-      <div className="container py-[56px] px-[20px] md:py-[64px] lg:py-[104px]">
+      <div id="career" className="container py-[56px] px-[20px] md:py-[64px] lg:py-[104px]">
         <h2 className="text-[40px] font-thin leading-[56px] tracking-[-1.6px] uppercase mb-[24px]">
           {data.title.title}
           <span className="font-medium">{data.title.span}</span>

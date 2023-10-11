@@ -4,7 +4,7 @@ import Image from "next/image";
 import content from "../../public/content/navigation.json";
 import logo from "../../public/images/logo.png";
 import { Karantina } from "next/font/google";
-import Navigation from "./navigation";
+import Navigation from "./Navigation";
 
 const karantina = Karantina({
   subsets: ["latin"],

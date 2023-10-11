@@ -20,7 +20,10 @@ const config: Config = {
         lg: '104px',
       },
       center: true,
-    },
+      },
+      colors: {
+        'backdrop-color': 'rgba(1, 10, 5, 0.75)'
+      }
     },
   },
   plugins: [],
