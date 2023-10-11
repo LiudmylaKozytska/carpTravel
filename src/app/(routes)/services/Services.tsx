@@ -23,7 +23,7 @@ export default function Services() {
               backgroundImage: `linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)), url(/images/bg-services-${
                 index + 1
               }.jpg)`,
-              backgroundRepeat: "no repeat",
+              backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundOrigin: "border-box",
               backgroundPosition: "center",

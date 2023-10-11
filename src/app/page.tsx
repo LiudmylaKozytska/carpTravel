@@ -5,7 +5,7 @@ import {
   Gallery,
   Hero,
   Services,
-} from "@/app/(routes)";
+} from "@/src/app/(routes)";
 
 export default function Home() {
   return (
