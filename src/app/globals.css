@@ -16,3 +16,8 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
+
+.swiper-slide {
+  margin: 0; 
+  padding: 0; 
+}
