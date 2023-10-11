@@ -1,5 +1,5 @@
-import BackgroundImage from "@/components/BackgroundImage";
-import data from "../../../../public/content/career.json";
+import BackgroundImage from "@/src/components/BackgroundImage";
+import data from "@/public/content/career.json";
 
 export default function Career() {
   return (

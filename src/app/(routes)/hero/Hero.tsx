@@ -1,6 +1,6 @@
-import BackgroundImage from "@/components/BackgroundImage";
-import data from "../../../../public/content/hero.json";
-import Header from "@/components/Header";
+import BackgroundImage from "@/src/components/BackgroundImage";
+import data from "@/public/content/hero.json";
+import Header from "@/src/components/Header";
 
 export default function Hero() {
   return (

@@ -1,4 +1,4 @@
-import BackgroundImage from "@/components/BackgroundImage";
+import BackgroundImage from "@/src/components/BackgroundImage";
 
 export default function Gallery() {
     return <BackgroundImage image="/images/gallery.jpg">

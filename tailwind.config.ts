@@ -22,7 +22,8 @@ const config: Config = {
       center: true,
       },
       colors: {
-        'backdrop-color': 'rgba(1, 10, 5, 0.75)'
+        'backdrop-color': 'rgba(1, 10, 5, 0.75)',
+        'font-color': 'rgba(255, 255, 255, 0.20)'
       }
     },
   },
