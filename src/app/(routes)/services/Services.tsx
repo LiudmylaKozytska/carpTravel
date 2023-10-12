@@ -1,19 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import BackgroundImage from "@/src/components/BackgroundImage";
 import data from "@/public/content/services.json";
 
 import "swiper/css";
 
 export default function Services() {
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
+  useEffect(() => {
+    console.log(activeSlideIndex);
+  }, [activeSlideIndex]);
+
+  const handleSlideChange = (swiper: any) => {
+    const index = swiper.realIndex;
+    setActiveSlideIndex(index);
+  };
+
   return (
     <Swiper
       spaceBetween={0}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={handleSlideChange}
       navigation={true}
     >
       {data.slides.map((slide, index) => (
@@ -51,9 +60,17 @@ export default function Services() {
               <p className="text-[12px] font-extralight leading-[24px] tracking-[2.4px] text-right mb-[24px]">
                 {slide.subtitle}
               </p>
-              <ul className="mb-[34px] text-[20px] font-extralight leading-[17px] uppercase opacity-50">
+              <ul className="mb-[34px] text-[20px] font-extralight leading-[17px] uppercase">
                 {data.offeringItems.map((item, index) => (
-                  <li key={index} className="mb-[16px] last:mb-[34px]">
+                  <li
+                    key={index}
+                    className={`mb-[16px] last:mb-[34px]  ${
+                      activeSlideIndex === index
+                        ? "font-medium list-disc list-inside decoration-white"
+                        : ""
+                    }`}
+                    style={{ opacity: activeSlideIndex === index ? 1 : 0.5 }}
+                  >
                     {item}
                   </li>
                 ))}

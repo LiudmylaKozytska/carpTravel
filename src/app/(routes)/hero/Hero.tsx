@@ -1,4 +1,6 @@
-import BackgroundImage from "@/src/components/BackgroundImage";
+"use client";
+
+import { Link } from "react-scroll";import BackgroundImage from "@/src/components/BackgroundImage";
 import data from "@/public/content/hero.json";
 import Header from "@/src/components/Header";
 
