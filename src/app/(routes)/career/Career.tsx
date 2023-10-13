@@ -1,7 +1,13 @@
+'use client'
+
 import BackgroundImage from "@/src/components/BackgroundImage";
 import data from "@/public/content/career.json";
+import ContactForm from "@/src/components/ContactForm";
 
 export default function Career() {
+
+
+
   return (
     <>
     <BackgroundImage image="/images/career.jpg">
@@ -26,9 +32,10 @@ export default function Career() {
             </li>
           ))}
         </ul>
-        </div>
         <p className="text-[14px] font-extralight leading-[20px] w-[180px] mb-[36px] ml-auto block">{data.description.add}</p>
-      </BackgroundImage>
+        <ContactForm/>
+        </div>
+        </BackgroundImage>
       {/* <BackgroundImage image="/images/career.jpg">
         <div id="career" className="container py-[56px] px-[20px] md:py-[64px] lg:py-[104px]"></div>
       </BackgroundImage> */}

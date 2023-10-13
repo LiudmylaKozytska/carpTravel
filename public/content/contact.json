@@ -1,5 +1,8 @@
 {
-    "title": "CONTACT US",
+    "title": {
+    "title": "CONTACT ",
+    "span": "US"
+  },
     "numbers": {
         "text": "Phone number",
     "numbers": [

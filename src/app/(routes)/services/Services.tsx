@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import data from "@/public/content/services.json";
@@ -9,10 +9,6 @@ import "swiper/css";
 
 export default function Services() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-
-  useEffect(() => {
-    console.log(activeSlideIndex);
-  }, [activeSlideIndex]);
 
   const handleSlideChange = (swiper: any) => {
     const index = swiper.realIndex;

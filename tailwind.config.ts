@@ -8,23 +8,27 @@ const config: Config = {
   ],
   theme: {
     screens: {
-        sm: { max: "767.98px" },
-        md: "768px",
-        lg: "1280px",
-      },
+      sm: { max: "767.98px" },
+      md: "768px",
+      lg: "1280px",
+    },
     extend: {
       container: {
-      padding: {
-        sm: '20px',
-        md: '32px',
-        lg: '104px',
-      },
-      center: true,
+        padding: {
+          sm: "20px",
+          md: "32px",
+          lg: "104px",
+        },
+        center: true,
       },
       colors: {
-        'backdrop-color': 'rgba(1, 10, 5, 0.75)',
-        'font-color': 'rgba(255, 255, 255, 0.20)'
-      }
+        "backdrop-color": "rgba(1, 10, 5, 0.75)",
+        "font-color": "rgba(255, 255, 255, 0.20)",
+        "form-color": "rgba(255, 255, 255, 0.05);",
+      },
+      placeholderOpacity: {
+        "20": "0.2",
+      },
     },
   },
   plugins: [],
