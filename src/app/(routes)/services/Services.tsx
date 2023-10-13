@@ -29,7 +29,7 @@ export default function Services() {
         <SwiperSlide key={index} className="swiper-slide">
           <div
             style={{
-              backgroundImage: `linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)), url(/images/bg-services-${
+              backgroundImage: `linear-gradient(rgba(2, 15, 8, 0.75), rgba(2, 15, 8, 0.75)), url(/images/bg-services-${
                 index + 1
               }.jpg)`,
               backgroundRepeat: "no-repeat",

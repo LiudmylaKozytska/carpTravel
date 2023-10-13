@@ -3,6 +3,7 @@ import data from "@/public/content/career.json";
 
 export default function Career() {
   return (
+    <>
     <BackgroundImage image="/images/career.jpg">
       <div id="career" className="container py-[56px] px-[20px] md:py-[64px] lg:py-[104px]">
         <h2 className="text-[40px] font-thin leading-[56px] tracking-[-1.6px] uppercase mb-[24px]">
@@ -25,7 +26,12 @@ export default function Career() {
             </li>
           ))}
         </ul>
-      </div>
-    </BackgroundImage>
+        </div>
+        <p className="text-[14px] font-extralight leading-[20px] w-[180px] mb-[36px] ml-auto block">{data.description.add}</p>
+      </BackgroundImage>
+      {/* <BackgroundImage image="/images/career.jpg">
+        <div id="career" className="container py-[56px] px-[20px] md:py-[64px] lg:py-[104px]"></div>
+      </BackgroundImage> */}
+    </>
   );
 }
