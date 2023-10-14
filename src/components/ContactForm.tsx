@@ -2,27 +2,27 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { SubmitButton } from "./Button"
 
 
-type Inputs = {
-  example: string
-  exampleRequired: string
-}
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 
-export default function ContactForm() {
+export default function ContactForm({ showFields }: { showFields: boolean }) {
   const {
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<FormData>()
 
-  async function onSubmit(data: FormData) {
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
     console.log(data);
     await new Promise<void>((resolve) => {
       setTimeout(() => {
         resolve();
       }, 2000);
     });
-  }
+  };
 
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -37,7 +37,8 @@ export default function ContactForm() {
           type="text"
           className="sm:w-[100%] bg-form-color text-[13px] font-extralight leading-[24px] pl-[8px] mb-[16px] placeholder-opacity-20"
           placeholder="John Smith"
-          autoComplete="off" />
+          autoComplete="off"
+/>
         {/* {errors?.email && (
                     <p className="text-red-600 text-sm">
                       {errors?.email?.message}
@@ -49,13 +50,16 @@ export default function ContactForm() {
         >
           E-mail
         </label>
-        <input id="position"
+        <input id="email"
           name="email"
           type="text"
           className="sm:w-[100%] bg-form-color text-[13px] font-extralight leading-[24px] pl-[8px] mb-[16px]"
           placeholder="johnsmith@email.com"
-          autoComplete="off" />
-        <label
+          autoComplete="off"
+        />
+        {showFields && (
+          <>
+          <label
           htmlFor="position"
           className="text-[12px] font-extralight leading-[24px] tracking-[2.4px] mb-[4px]"
         >
@@ -78,7 +82,8 @@ export default function ContactForm() {
           type="tel"
           className="sm:w-[100%] bg-form-color text-[13px] font-extralight leading-[24px] pl-[8px] mb-[16px]"
           placeholder="+ 38 (097) 12 34 567"
-          autoComplete="off" />
+          autoComplete="off" /></>
+        )}
         <label
           htmlFor="message"
           className="text-[12px] font-extralight leading-[24px] tracking-[2.4px] mb-[4px]"
