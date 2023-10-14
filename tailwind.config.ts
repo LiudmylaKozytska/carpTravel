@@ -9,18 +9,18 @@ const config: Config = {
   theme: {
     screens: {
       sm: { max: "767.98px" },
-      md: "768px",
-      lg: "1280px",
+      md: { min: '768px'},
+      lg: {min: "1280px"},
     },
-    extend: {
-      container: {
+    container: {
         padding: {
-          sm: "20px",
-          md: "32px",
-          lg: "104px",
+          sm: '20px',
+          md: '32px',
+          lg: '104px',
         },
         center: true,
       },
+    extend: {
       colors: {
         "backdrop-color": "rgba(1, 10, 5, 0.75)",
         "font-color": "rgba(255, 255, 255, 0.20)",

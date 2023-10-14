@@ -31,9 +31,9 @@ export default function Navigation() {
             : "sm:hidden"
         }`}
       >
-        <ul className="font-medium tracking-[1.8px] opacity-100 text-center">
+        <ul className="font-regular tracking-[1.8px] md:tracking-[1.4px] opacity-100 text-center flex sm:block md:gap-[24px] lg:gap-[56px]">
           {content.map((item) => (
-            <li key={item.id} className="mb-[48px] last:mb-0 text-[18px]">
+            <li key={item.id} className="sm:mb-[48px] last:mb-0 text-[18px] md:text-[14px] ">
               <Link
                 to={item.link}
                 duration={600}

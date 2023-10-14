@@ -14,7 +14,7 @@ const karantina = Karantina({
 
 export default function Header() {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between items-center">
       <div>
         <Image src={logo} alt="logo" />
         <p className="font-karantina text-[14px]">CarpTravel</p>

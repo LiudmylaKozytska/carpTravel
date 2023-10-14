@@ -12,7 +12,7 @@ export default function Contact() {
           {data.title.title}
           <span className="font-medium">{data.title.span}</span>
         </h2>
-            <ContactForm/>
+            <ContactForm showFields={false} />
     </div>
     </BackgroundImage>
 }
