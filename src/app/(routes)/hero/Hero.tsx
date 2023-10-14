@@ -22,7 +22,7 @@ export default function Hero() {
             </p></div>
         </div>
         <div className="md:flex justify-between">
-          <div className="md:mt-[-130px] lg:mt-[-310px]"><h1 className="mb-[24px] md:mb-[68px] lg:mb-[148px] text-[40px] md:text-[67px] lg:text-[98px] font-medium uppercase leading-[56px]  md:leading-[81px] lg:leading-[119px] tracking-[-1.6px] md:tracking-[-2.68px] lg:tracking-[-3.92px] md:w-[426px] lg:w-[646px]">
+          <div className="md:mt-[-130px] lg:mt-[-310px]"><h1 className="mb-[24px] md:mb-[68px] lg:mb-[148px] text-[40px] md:text-[67px] lg:text-[98px] font-medium uppercase leading-[56px]  md:leading-[81px] lg:leading-[120px] tracking-[-1.6px] md:tracking-[-2.68px] lg:tracking-[-3.92px] md:w-[426px] lg:w-[646px]">
           {data.title.main}
           <span className="font-thin"> {data.title.add}</span>
         </h1>
