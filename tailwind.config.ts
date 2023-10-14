@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     screens: {
       sm: { max: "767.98px" },
-      md: { min: '768px'},
-      lg: {min: "1280px"},
+      md: '768px',
+      lg: "1280px",
     },
     container: {
         padding: {
