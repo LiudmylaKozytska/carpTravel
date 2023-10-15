@@ -10,8 +10,8 @@ export default function Career() {
 
   return (
     <BackgroundImage image="/images/career.jpg">
-      <div id="career" className="container py-[56px] px-[20px] md:py-[64px] lg:py-[104px]">
-        <h2 className="text-[40px] font-thin leading-[56px] tracking-[-1.6px] uppercase mb-[24px]">
+      <div id="career" className="container sm:px-[20px] py-[56px] md:py-[64px] lg:py-[104px]">
+        <h2 className="text-[40px] md:text-[67px] lg:text-[98px] font-thin leading-[56px] md:leading-[81px] lg:leading-0 tracking-[-1.6px] md:tracking-[-2.68px] lg:tracking-[-3.92px] uppercase mb-[24px]">
           {data.title.title}
           <span className="font-medium">{data.title.span}</span>
         </h2>
