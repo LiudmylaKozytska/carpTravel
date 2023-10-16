@@ -1,26 +1,26 @@
 {
-    "title": {
+  "title": {
     "title": "CONTACT ",
     "span": "US"
   },
-    "numbers": {
-        "text": "Phone number",
+  "numbers": {
+    "text": "Phone number",
     "numbers": [
       { "name": "+38 (098) 12 34 567", "url": "tel:+380981234567" },
       { "name": "+38 (073) 12 34 567", "url": "tel:+380731234567" }
     ]
-    },    
-    "e-mail": {
-        "text": "E-mail",
-        "e-mail": "support@carptravel.com"
-    },
-    "socialMedia": {
-        "text": "Follow us",
-        "links": [
+  },
+  "email": {
+    "text": "E-mail",
+    "email": "support@carptravel.com"
+  },
+  "socialMedia": {
+    "text": "Follow us",
+    "links": [
       { "name": "facebook", "url": "https://uk-ua.facebook.com/" },
       { "name": "instagram", "url": "https://www.instagram.com/" },
       { "name": "youtube", "url": "https://www.youtube.com/" },
       { "name": "tiktok", "url": "https://www.tiktok.com/" }
     ]
-    }
+  }
 }
