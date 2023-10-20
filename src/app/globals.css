@@ -18,12 +18,26 @@ body {
 }
 
 .swiper-slide {
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
 }
 
 .list-style::before {
   content: "◆";
   font-size: 8px;
-  margin-right: 7px;
+
+  position: absolute;
+  top: 50%;
+  transform: translate(-15px, -50%);
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 415px;
+  height: 293px;
 }

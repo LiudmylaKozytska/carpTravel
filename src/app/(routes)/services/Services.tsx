@@ -55,7 +55,7 @@ export default function Services() {
                   width={280}
                   height={213}
                   sizes="100vw"
-                  className="block sm:mb-[12px] md:w-[463px] md:h-[370px] lg:w-[608px] lg:h-[434px]"
+                  className="block sm:w-full sm:h-auto sm:mb-[12px] md:w-[463px] md:h-[370px] lg:w-[608px] lg:h-[434px]"
                 ></Image>
                 <div className="md:flex md:flex-col justify-between lg:w-[100%]">
                   <div className="flex md:flex-col-reverse lg:flex-row-reverse lg:justify-end sm:block">
@@ -68,7 +68,7 @@ export default function Services() {
                           key={index}
                           className={`mb-[16px] sm:last:mb-[34px] md:last:mb-[25px] lg:mb-[24px] ${
                             activeSlideIndex === index
-                              ? "font-medium list-style decoration-white"
+                              ? "relative font-medium list-style decoration-white ml-[15px]"
                               : ""
                           }`}
                           style={{

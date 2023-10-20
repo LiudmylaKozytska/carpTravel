@@ -1,0 +1,8 @@
+{"images": [
+    { "src": "/images/lake.jpg", "alt": "Lake" },
+    { "src": "/images/river.jpg", "alt": "River" },
+    { "src": "/images/hills.jpg", "alt": "Hills" },
+    { "src": "/images/services-1.jpg", "alt": "Traveling" },
+    { "src": "/images/services-2.jpg", "alt": "Climbing" },
+    { "src": "/images/services-3.jpg", "alt": "Balooning" }
+  ]}
