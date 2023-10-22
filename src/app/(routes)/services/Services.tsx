@@ -19,7 +19,7 @@ export default function Services() {
     <Swiper
       spaceBetween={0}
       onSlideChange={handleSlideChange}
-      navigation={true}
+      navigation={false}
     >
       {data.slides.map((slide, index) => (
         <SwiperSlide key={index} className="swiper-slide">
