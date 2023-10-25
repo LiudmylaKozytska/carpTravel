@@ -33,62 +33,63 @@ export default function Gallery() {
           <span className="font-medium">gallery</span>
         </h2>
         {isPageWide ? (
-           navReady && (
+          navReady && (
             <div className="relative">
-            <Swiper
-              modules={[Navigation]}
-              className="h-[295px] lg:h-[430px]"
-              wrapperTag="ul"
-              slidesPerView={3}
-              loopedSlides={3}
-              spaceBetween={24}
-              grabCursor={true}
-              loop
-              centeredSlides
-              navigation={{
-                prevEl: prevRef.current,
-                nextEl: nextRef.current,
-              }}
-            >
-              {data.images.map((image, index) => (
-                <SwiperSlide className="relative" key={index} tag="li">
-                  {({ isActive }) => (
-                    <div className="slide-container h-full w-full relative">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill={true}
-                        className={`object-cover`}
-                      />
-                      <div
-                        className={`absolute top-0 bottom-0 left-0 right-0  ${
-                          isActive
-                            ? "gallery-slide-bg-active"
-                            : "gallery-slide-bg"
-                        }`}
-                      ></div>
-                    </div>
-                  )}
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <div className="absolute flex justify-between flex-row bottom-4 inset-x-9 xl:inset-x-56 text-[33px] font-thin z-10">
-              <button
-                type="button"
-                className="uppercase hover:opacity-75    transition-all duration-300"
-                ref={prevRef}
+              <Swiper
+                modules={[Navigation]}
+                className="h-[295px] lg:h-[430px]"
+                wrapperTag="ul"
+                slidesPerView={3}
+                loopedSlides={3}
+                spaceBetween={24}
+                grabCursor={true}
+                loop
+                centeredSlides
+                speed={1000}
+                navigation={{
+                  prevEl: prevRef.current,
+                  nextEl: nextRef.current,
+                }}
               >
-                Back
-              </button>
-              <button
-                type="button"
-                className="uppercase hover:opacity-75  transition-all duration-300 "
-                ref={nextRef}
-              >
-                Next
-              </button>
+                {data.images.map((image, index) => (
+                  <SwiperSlide className="relative" key={index} tag="li">
+                    {({ isActive }) => (
+                      <div className="slide-container h-full w-full relative">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill={true}
+                          className={`object-cover`}
+                        />
+                        <div
+                          className={`absolute top-0 bottom-0 left-0 right-0  ${
+                            isActive
+                              ? "gallery-slide-bg-active"
+                              : "gallery-slide-bg"
+                          }`}
+                        ></div>
+                      </div>
+                    )}
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <div className="absolute flex justify-between flex-row bottom-4 inset-x-9 xl:inset-x-56 text-[33px] font-thin z-10">
+                <button
+                  type="button"
+                  className="uppercase hover:opacity-75    transition-all duration-300"
+                  ref={prevRef}
+                >
+                  Back
+                </button>
+                <button
+                  type="button"
+                  className="uppercase hover:opacity-75  transition-all duration-300 "
+                  ref={nextRef}
+                >
+                  Next
+                </button>
+              </div>
             </div>
-          </div>
           )
         ) : (
           <ul>
