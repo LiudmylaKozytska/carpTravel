@@ -59,6 +59,7 @@ export default function Gallery() {
                           src={image.src}
                           alt={image.alt}
                           fill={true}
+                          sizes="100vw"
                           className={`object-cover`}
                         />
                         <div

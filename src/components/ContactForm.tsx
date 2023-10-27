@@ -1,15 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import Image from "next/image";
 import { SubmitButton } from "./Button";
+import errorIcon from "@/public/icons/errorIcon.svg"
+import { PhoneMask } from "./Mask";
+
 
 type FormData = {
   name: string;
   email: string;
   message: string;
   position: string;
-  phone: number;
+  phone: string;
   checked: boolean;
 };
 
@@ -21,6 +25,7 @@ export default function ContactForm({ showFields }: { showFields: boolean }) {
     handleSubmit,
     reset,
     formState: { errors },
+    control,
   } = useForm<FormData>();
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
@@ -44,7 +49,7 @@ export default function ContactForm({ showFields }: { showFields: boolean }) {
             required: true,
           })}
         />
-        {errors.name && <p className="text-red-600 ">Incorrect name</p>}
+        {errors.name && <div className="flex justify-end gap-[4px] mt-[-16px]"><Image src={errorIcon} alt="error" width={18} height={18}/><p className="text-red-600 text-right">Incorrect name</p></div>}
       </label>
       <label className="text-[12px] font-extralight leading-[24px] tracking-[2.4px] mb-[4px]">
         E-mail
@@ -58,7 +63,7 @@ export default function ContactForm({ showFields }: { showFields: boolean }) {
             pattern: /^\S+@\S+\.\S+$/,
           })}
         />
-        {errors.email && <p className="text-red-600 ">Invalid email</p>}
+        {errors.email && <div className="flex justify-end gap-[4px] mt-[-16px]"><Image src={errorIcon} alt="error" width={18} height={18} /><p className="text-red-600  ">Invalid email</p></div>}
       </label>
       {showFields && (
         <>
@@ -76,19 +81,30 @@ export default function ContactForm({ showFields }: { showFields: boolean }) {
               })}
             />
           </label>
-          <label className="text-[12px] font-extralight leading-[24px] tracking-[2.4px] mb-[4px]">
-            Phone
-            <input
-              type="tel"
-              className="sm:w-[100%] bg-form-color text-[13px] font-extralight leading-[24px] pl-[8px] mb-[16px]"
-              placeholder="+ 38 (097) 12 34 567"
-              autoComplete="off"
-              {...register("phone", {
-                required: true,
-                pattern: /^[0-9]+$/,
-              })}
-            />
-          </label>
+           <label className="text-[12px] font-extralight leading-[24px] tracking-[2.4px] mb-[4px]">
+  Phone
+  <Controller
+    name="phone"
+    control={control}
+    defaultValue=""
+    render={({ field }) => (
+      <PhoneMask
+                          mask="+ 38 (999) 99 99 999"
+        value={field.value}
+        onChange={field.onChange}
+      >
+        {(inputProps: any) => (
+          <input
+            className="sm:w-[100%] bg-form-color text-[13px] font-extralight leading-[24px] pl-[8px] mb-[16px]"
+            placeholder="+ 38 (097) 12 34 567"
+            autoComplete="off"
+            {...inputProps}
+          />
+        )}
+      </PhoneMask>
+    )}
+  />
+</label>
         </>
       )}
       <label
